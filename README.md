@@ -1,10 +1,10 @@
-# Cinepolis Pie Chart Blue-Blue
+# Softtek Pie Chart Green/Blue
 
 Softtek panel for grafana 6+ & 7+, coding with react.
 
 Code editor is attached in the edit panel to configure the option of echarts.
 
-![image](https://github.com/saterunholy/cinepolis-temp2/blob/master/doc/screenshot2.png)
+![image](https://github.com/saterunholy/piechart-template1/blob/master/doc/piechart1.png)
 
 ## How Use
 
