@@ -26,7 +26,7 @@ const axisOption = {
 };
 
 return {
-  backgroundColor: '#15205a',
+  backgroundColor: '#262B30',
   tooltip: {
     trigger: 'axis',
   },
@@ -59,98 +59,24 @@ return {
     containLabel: true,
   },
   series: [
-      {
-            name: 'Results 1',
+    { name: 'piecharttemp1',
             type: 'pie',
-            selectedMode: 'single',
-            radius: [0, '30%'],
-
-            label: {
-                position: 'inner',
-                color: '#5D5E63',
-                fontWeight: 'bold'
-            },
-            labelLine: {
-                show: false
-            },
+            radius: [30, 110],
+            center: ['50%', '50%'],
+            roseType: 'area',
             data: [
-                {value: 335, name: 'Data 1', selected: true},
-                {value: 679, name: 'Data 2'},
-                {value: 1548, name: 'Data 3'}
-            ],
-        itemStyle: {
-                color: '#FFFFFF',
-                borderColor: '#000000',
-                shadowBlur: 200,
-                shadowColor: 'rgba(0, 0, 0, 0.5)'
-            }
-        }, 
-        {
-            name: 'Results 2',
-            type: 'pie',
-            radius: ['40%', '55%'],
-            label: {
-                formatter: '{a|{a}}{abg|}\\n{hr|}\\n  {b|{b}：}{c}  {per|{d}%}  ',
-                backgroundColor: '#eee',
-                borderColor: '#aaa',
-                borderWidth: 1,
-                borderRadius: 10,
-                 shadowBlur:3,
-                 shadowOffsetX: 2,
-                 shadowOffsetY: 2,
-                 shadowColor: '#999',
-                 padding: [0, 7],
-                rich: {
-                    a: {
-                        color: '#243EC5',
-                        lineHeight: 17,
-                        align: 'center'
-                    },
-                    // abg: {
-                    //     backgroundColor: '#333',
-                    //     width: '100%',
-                    //     align: 'right',
-                    //     height: 22,
-                    //     borderRadius: [4, 4, 0, 0]
-                    // },
-                    hr: {
-                        borderColor: '#243EC5',
-                        width: '100%',
-                        borderWidth: 0.5,
-                        height: 0
-                    },
-                    b: {
-                        fontSize: 16,
-                        lineHeight: 22
-                    },
-                    per: {
-                        color: '#eee',
-                        backgroundColor: '#15205a',
-                        padding: [2, 4],
-                        borderRadius: 2
-                    }
-                }
-            },
-            data: [
-                {value: 100, name: 'Data 1'},
-                {value: 500, name: 'Data 2'},
-                {value: 234, name: 'Data 3'},
-                {value: 135, name: 'Data 4'},
-                {value: 589, name: 'Data 5'},
-                {value: 251, name: 'Data 6'},
-                {value: 147, name: 'Data 7'},
-                {value: 102, name: 'Data 8'}
-            ],
-            itemStyle: {
-                color: '#243EC5',
-                borderColor: '#ffffff',
-                borderWidth: 0.3,
-                shadowBlur: 200,
-                shadowColor: 'rgba(0, 0, 100, 10)'
-            },
-        }
+                {value: 10, name: 'Data1', itemStyle: {color: '#195292'}},
+                {value: 5, name: 'Data2', itemStyle: {color: '#19923C'}},
+                {value: 15, name: 'Data3', itemStyle: {color: '#195292'}},
+                {value: 25, name: 'Data4', itemStyle: {color: '#19923C'}},
+                {value: 20, name: 'Data5', itemStyle: {color: '#195292'}},
+                {value: 35, name: 'Data6', itemStyle: {color: '#19923C'}},
+                {value: 30, name: 'Data7', itemStyle: {color: '#195292'}},
+                {value: 40, name: 'Data8', itemStyle: {color: '#19923C'}}
+            ]
+    },
   ],
-  graphic: [
+   graphic: [
     {
             type: 'image',
             id: 'logo',
@@ -163,16 +89,25 @@ return {
                 opacity: 1
             }
   },
-    { type: 'image',
-            id: 'logo2',
-            right: 6,
-            bottom: 12,
-            style: {
-                image: 'https://i.ibb.co/bm1V7pW/cinepolis-logo.png" alt="cinepolis-logo',
-                width: 80,
-                height: 30,
-                opacity: 1
-            }
-    }
-    ]
-};
+     ],
+};`;
+
+// const getOption = `function (${funcParams}) {
+//   ${funcBody}
+// }`
+// const funcBodyReg = /{\n([\S\s]*)\n}/;
+// const matchResult = getOption.match(funcBodyReg);
+// const funcBody = matchResult ? matchResult[1] : '';
+
+export interface SimpleOptions {
+  followTheme: boolean,
+  getOption: string;
+}
+
+export const defaults: SimpleOptions = {
+  followTheme: false,
+  getOption: funcBody,
+}
+
+
+
